@@ -7,28 +7,28 @@
 <meta name="description" content="מרחב מובנה לפריצות קוגניטיביות. מתודה המשלבת אמנות, נוירולוגיה ופנומנולוגיה — עבור חברות טכנולוגיה שמבינות שהיתרון הבא הוא אנושי.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════════
    TOKENS
 ═══════════════════════════════════════════ */
 :root {
-  --dark:       #0e0c09;
-  --dark2:      #1a1713;
-  --dark3:      #221f1a;
-  --light:      #f4f0e8;
-  --light2:     #ebe5d8;
-  --gold:       #c4a24a;
-  --gold-dim:   rgba(196,162,74,0.11);
-  --gold-bdr:   rgba(196,162,74,0.32);
-  --warm:       #f4f0e8;
-  --muted:      rgba(244,240,232,0.48);
-  --text:       #1e1b16;
-  --text-m:     rgba(30,27,22,0.62);
-  --teal:       #3d8a9e;
-  --blue:       #4a7fbf;
-  --grn:        #4e9468;
-  --ylw:        #c8aa2a;
+  --dark:       #1c1208;
+  --dark2:      #261a0c;
+  --dark3:      #2e2010;
+  --light:      #f4ede0;
+  --light2:     #ede4d2;
+  --gold:       #b85c38;
+  --gold-dim:   rgba(184,92,56,0.11);
+  --gold-bdr:   rgba(184,92,56,0.32);
+  --warm:       #e8dfd2;
+  --muted:      rgba(232,223,210,0.48);
+  --text:       #221508;
+  --text-m:     rgba(34,21,8,0.62);
+  --teal:       #7a9e8a;
+  --blue:       #5a7d8a;
+  --grn:        #7a9e8a;
+  --ylw:        #b85c38;
 
   --radius:     12px;
   --gap:        clamp(1rem, 3vw, 2rem);
@@ -66,10 +66,10 @@ button { cursor: pointer; font-family: inherit; border: none; }
   display: block;
   margin-bottom: 0.8rem;
 }
-.label--dark { color: rgba(30,27,22,0.55); }
+.label--dark { color: rgba(34,21,8,0.55); }
 
 .section-title {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 5vw, 4.2rem);
   line-height: 1.05;
   font-weight: 700;
@@ -82,7 +82,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   margin: 1.4rem 0;
 }
 .rule--center { margin: 1.4rem auto; }
-.rule--dark { background: rgba(30,27,22,0.3); }
+.rule--dark { background: rgba(34,21,8,0.3); }
 
 /* Scroll-reveal */
 .reveal {
@@ -112,13 +112,13 @@ button { cursor: pointer; font-family: inherit; border: none; }
   border-bottom: 1px solid transparent;
 }
 .nav.scrolled {
-  background: rgba(14,12,9,0.96);
+  background: rgba(28,18,8,0.96);
   backdrop-filter: blur(12px);
-  border-bottom-color: rgba(196,162,74,0.15);
+  border-bottom-color: rgba(184,92,56,0.15);
 }
 
 .nav__logo {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--gold);
@@ -134,7 +134,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 .nav__links a {
   font-size: 0.88rem;
   font-weight: 500;
-  color: rgba(244,240,232,0.75);
+  color: rgba(232,223,210,0.75);
   transition: color 0.2s;
 }
 .nav__links a:hover { color: var(--gold); }
@@ -187,7 +187,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 .nav__overlay.open { opacity: 1; pointer-events: auto; }
 .nav__overlay a {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
   color: var(--warm);
   transition: color 0.2s;
@@ -216,7 +216,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(196,162,74,0.06) 0%, transparent 70%);
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(184,92,56,0.06) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -250,7 +250,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 .hero__title {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2.6rem, 5.5vw, 5rem);
   line-height: 1.05;
   font-weight: 700;
@@ -292,9 +292,9 @@ button { cursor: pointer; font-family: inherit; border: none; }
 .btn--ghost {
   background: transparent;
   color: var(--warm);
-  border: 2px solid rgba(244,240,232,0.3);
+  border: 2px solid rgba(232,223,210,0.3);
 }
-.btn--ghost:hover { border-color: var(--warm); background: rgba(244,240,232,0.07); }
+.btn--ghost:hover { border-color: var(--warm); background: rgba(232,223,210,0.07); }
 
 .hero__scroll {
   position: absolute;
@@ -306,7 +306,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
-  color: rgba(244,240,232,0.3);
+  color: rgba(232,223,210,0.3);
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -342,8 +342,8 @@ button { cursor: pointer; font-family: inherit; border: none; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: rgba(244,240,232,0.07);
-  border: 1px solid rgba(244,240,232,0.07);
+  background: rgba(232,223,210,0.07);
+  border: 1px solid rgba(232,223,210,0.07);
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -357,7 +357,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 .stat__num {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 700;
   color: var(--gold);
@@ -415,14 +415,14 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
 .pillar {
   padding: clamp(1.5rem, 2.5vw, 2.2rem);
-  border: 1px solid rgba(30,27,22,0.1);
+  border: 1px solid rgba(34,21,8,0.1);
   border-radius: var(--radius);
-  background: rgba(30,27,22,0.03);
+  background: rgba(34,21,8,0.03);
   transition: border-color 0.25s, box-shadow 0.25s;
 }
 .pillar:hover {
   border-color: var(--gold-bdr);
-  box-shadow: 0 4px 24px rgba(196,162,74,0.08);
+  box-shadow: 0 4px 24px rgba(184,92,56,0.08);
 }
 
 .pillar__icon {
@@ -431,7 +431,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 .pillar__title {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
@@ -455,7 +455,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(30,27,22,0.4);
+  color: rgba(34,21,8,0.4);
   margin-bottom: 2rem;
 }
 
@@ -475,7 +475,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   top: 30px;
   left: 30px; right: 30px;
   height: 2px;
-  background: repeating-linear-gradient(90deg, rgba(30,27,22,0.2) 0px, rgba(30,27,22,0.2) 6px, transparent 6px, transparent 14px);
+  background: repeating-linear-gradient(90deg, rgba(34,21,8,0.2) 0px, rgba(34,21,8,0.2) 6px, transparent 6px, transparent 14px);
   z-index: 0;
 }
 
@@ -495,7 +495,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.2rem;
   color: #fff;
@@ -507,7 +507,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   width: 84px; height: 84px;
   font-size: 1.5rem;
   margin-top: -12px;
-  box-shadow: 0 0 0 8px rgba(196,162,74,0.12), 0 0 30px rgba(196,162,74,0.3);
+  box-shadow: 0 0 0 8px rgba(184,92,56,0.12), 0 0 30px rgba(184,92,56,0.3);
 }
 
 .stage__name {
@@ -559,8 +559,8 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
 .program-card {
   background: var(--dark2);
-  border: 1px solid rgba(244,240,232,0.07);
-  border-top: 3px solid rgba(196,162,74,0.4);
+  border: 1px solid rgba(232,223,210,0.07);
+  border-top: 3px solid rgba(184,92,56,0.4);
   border-radius: var(--radius);
   padding: clamp(1.8rem, 3vw, 2.5rem);
   transition: border-top-color 0.3s, box-shadow 0.3s, transform 0.3s;
@@ -573,7 +573,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 .program-card--featured {
   border-top-color: var(--gold);
   background: var(--dark3);
-  box-shadow: 0 4px 30px rgba(196,162,74,0.12);
+  box-shadow: 0 4px 30px rgba(184,92,56,0.12);
 }
 
 .program-card__tag {
@@ -590,7 +590,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 .program-card__title {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.3rem, 2.2vw, 1.7rem);
   font-weight: 700;
   color: var(--warm);
@@ -611,14 +611,14 @@ button { cursor: pointer; font-family: inherit; border: none; }
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-top: 1px solid rgba(244,240,232,0.08);
+  border-top: 1px solid rgba(232,223,210,0.08);
   padding-top: 1.2rem;
 }
 
 .program-card__includes li {
   font-size: clamp(0.78rem, 1.2vw, 0.88rem);
   font-weight: 400;
-  color: rgba(244,240,232,0.65);
+  color: rgba(232,223,210,0.65);
   display: flex;
   gap: 0.6rem;
   align-items: baseline;
@@ -651,7 +651,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   aspect-ratio: 3/4;
   border: 2px solid var(--gold-bdr);
   border-radius: var(--radius);
-  background: rgba(30,27,22,0.06);
+  background: rgba(34,21,8,0.06);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -721,7 +721,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
 .article-card {
   background: var(--dark3);
-  border: 1px solid rgba(244,240,232,0.06);
+  border: 1px solid rgba(232,223,210,0.06);
   border-radius: var(--radius);
   padding: clamp(1.6rem, 2.5vw, 2.2rem);
   display: flex;
@@ -742,14 +742,14 @@ button { cursor: pointer; font-family: inherit; border: none; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--teal);
-  border: 1px solid rgba(61,138,158,0.4);
+  border: 1px solid rgba(122,158,138,0.4);
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
   align-self: flex-start;
 }
 
 .article-card__title {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   font-weight: 700;
   color: var(--warm);
@@ -769,13 +769,13 @@ button { cursor: pointer; font-family: inherit; border: none; }
   justify-content: space-between;
   align-items: center;
   padding-top: 0.8rem;
-  border-top: 1px solid rgba(244,240,232,0.07);
+  border-top: 1px solid rgba(232,223,210,0.07);
   margin-top: auto;
 }
 
 .article-card__time {
   font-size: 0.72rem;
-  color: rgba(244,240,232,0.3);
+  color: rgba(232,223,210,0.3);
   font-weight: 400;
 }
 
@@ -824,17 +824,17 @@ button { cursor: pointer; font-family: inherit; border: none; }
   align-items: flex-start;
   gap: 1.1rem;
   padding: clamp(1.2rem, 2vw, 1.7rem);
-  border: 1px solid rgba(30,27,22,0.1);
+  border: 1px solid rgba(34,21,8,0.1);
   border-radius: var(--radius);
-  background: rgba(30,27,22,0.02);
+  background: rgba(34,21,8,0.02);
   transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
   text-decoration: none;
   color: var(--text);
 }
 .resource-card:hover {
   border-color: var(--gold-bdr);
-  box-shadow: 0 4px 20px rgba(196,162,74,0.1);
-  background: rgba(30,27,22,0.04);
+  box-shadow: 0 4px 20px rgba(184,92,56,0.1);
+  background: rgba(34,21,8,0.04);
 }
 
 .resource-card__arrow {
@@ -856,7 +856,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 .resource-card__name {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(0.9rem, 1.5vw, 1.05rem);
   font-weight: 700;
   color: var(--text);
@@ -935,7 +935,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 .form-label {
   font-size: 0.78rem;
   font-weight: 500;
-  color: rgba(244,240,232,0.55);
+  color: rgba(232,223,210,0.55);
   letter-spacing: 0.04em;
 }
 
@@ -946,7 +946,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   font-weight: 300;
   color: var(--warm);
   background: var(--dark2);
-  border: 1px solid rgba(244,240,232,0.12);
+  border: 1px solid rgba(232,223,210,0.12);
   border-radius: 8px;
   padding: 0.85rem 1.1rem;
   direction: rtl;
@@ -954,10 +954,10 @@ button { cursor: pointer; font-family: inherit; border: none; }
   transition: border-color 0.2s, background 0.2s;
   outline: none;
 }
-.form-input::placeholder, .form-textarea::placeholder { color: rgba(244,240,232,0.25); }
+.form-input::placeholder, .form-textarea::placeholder { color: rgba(232,223,210,0.25); }
 .form-input:focus, .form-textarea:focus {
   border-color: var(--gold-bdr);
-  background: rgba(26,23,19,0.8);
+  background: rgba(38,26,12,0.8);
 }
 
 .form-textarea { min-height: 130px; resize: vertical; }
@@ -981,10 +981,10 @@ button { cursor: pointer; font-family: inherit; border: none; }
 .form__success {
   display: none;
   padding: 1.4rem;
-  background: rgba(78,148,104,0.12);
-  border: 1px solid rgba(78,148,104,0.35);
+  background: rgba(122,158,138,0.12);
+  border: 1px solid rgba(122,158,138,0.35);
   border-radius: 8px;
-  color: #7ec99a;
+  color: #8ab89c;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -996,7 +996,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 ═══════════════════════════════════════════ */
 .footer {
   background: var(--dark2);
-  border-top: 1px solid rgba(244,240,232,0.06);
+  border-top: 1px solid rgba(232,223,210,0.06);
   padding: 3rem var(--pad-x) 2.5rem;
 }
 
@@ -1016,7 +1016,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
 .footer__brand {}
 .footer__logo {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--gold);
@@ -1026,7 +1026,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 .footer__tagline {
   font-size: 0.78rem;
   font-weight: 300;
-  color: rgba(244,240,232,0.35);
+  color: rgba(232,223,210,0.35);
 }
 
 .footer__links {
@@ -1039,15 +1039,15 @@ button { cursor: pointer; font-family: inherit; border: none; }
 .footer__links a {
   font-size: 0.82rem;
   font-weight: 500;
-  color: rgba(244,240,232,0.5);
+  color: rgba(232,223,210,0.5);
   transition: color 0.2s;
 }
 .footer__links a:hover { color: var(--gold); }
 
 .footer__copy {
   font-size: 0.72rem;
-  color: rgba(244,240,232,0.2);
-  border-top: 1px solid rgba(244,240,232,0.06);
+  color: rgba(232,223,210,0.2);
+  border-top: 1px solid rgba(232,223,210,0.06);
   padding-top: 1.5rem;
 }
 
@@ -1061,9 +1061,9 @@ button { cursor: pointer; font-family: inherit; border: none; }
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.08em;
-  color: rgba(244,240,232,0.5);
+  color: rgba(232,223,210,0.5);
   margin-bottom: 1.8rem;
-  border: 1px solid rgba(196,162,74,0.2);
+  border: 1px solid rgba(184,92,56,0.2);
   padding: 0.38rem 1rem;
   border-radius: 50px;
 }
@@ -1087,15 +1087,15 @@ button { cursor: pointer; font-family: inherit; border: none; }
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   margin: 0 auto 2.5rem;
-  border: 1px solid rgba(196,162,74,0.18);
+  border: 1px solid rgba(184,92,56,0.18);
   border-radius: 14px;
   overflow: hidden;
   gap: 1px;
-  background: rgba(196,162,74,0.15);
+  background: rgba(184,92,56,0.15);
 }
 
 .hero__pillar {
-  background: rgba(14,12,9,0.97);
+  background: rgba(28,18,8,0.97);
   padding: clamp(1.4rem, 2.5vw, 2rem);
   display: flex;
   flex-direction: column;
@@ -1103,16 +1103,24 @@ button { cursor: pointer; font-family: inherit; border: none; }
   text-align: start;
   transition: background 0.25s;
 }
-.hero__pillar:hover { background: rgba(26,23,19,0.98); }
+.hero__pillar:hover { background: rgba(38,26,12,0.98); }
 
 .hero__pillar--mid {
-  background: rgba(196,162,74,0.05);
+  background: rgba(184,92,56,0.05);
 }
 
-.hero__pillar-icon { font-size: 1.8rem; line-height: 1; }
+.hero__pillar-icon {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.55;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
 
 .hero__pillar-title {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1rem, 1.7vw, 1.22rem);
   font-weight: 700;
   color: var(--warm);
@@ -1133,7 +1141,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   background: var(--dark3);
   padding: var(--pad-y) var(--pad-x);
   position: relative;
-  border-top: 1px solid rgba(196,162,74,0.08);
+  border-top: 1px solid rgba(184,92,56,0.08);
 }
 
 .techpitch__hook {
@@ -1154,7 +1162,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(244,240,232,0.4);
+  color: rgba(232,223,210,0.4);
   margin-bottom: 0.8rem;
 }
 
@@ -1207,15 +1215,15 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
 .space-zone {
   padding: clamp(1.5rem, 2.5vw, 2.2rem);
-  border: 1px solid rgba(30,27,22,0.1);
+  border: 1px solid rgba(34,21,8,0.1);
   border-radius: var(--radius);
-  background: rgba(30,27,22,0.02);
+  background: rgba(34,21,8,0.02);
   transition: border-color 0.25s;
 }
 .space-zone:hover { border-color: var(--gold-bdr); }
 
 .space-zone__num {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.8rem;
   font-weight: 700;
   color: var(--gold);
@@ -1225,7 +1233,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 .space-zone h3 {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
@@ -1241,13 +1249,13 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
 .space__model {
   padding: clamp(2rem, 4vw, 3.5rem);
-  background: rgba(196,162,74,0.06);
-  border: 1px solid rgba(196,162,74,0.25);
+  background: rgba(184,92,56,0.06);
+  border: 1px solid rgba(184,92,56,0.25);
   border-radius: var(--radius);
 }
 
 .space__model-title {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-weight: 700;
   color: var(--text);
@@ -1297,7 +1305,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
   .hero__title   { font-size: clamp(2.2rem, 8vw, 4rem); }
   .hero__pillars { grid-template-columns: 1fr; background: transparent; border: none; gap: 0.7rem; }
-  .hero__pillar  { border: 1px solid rgba(196,162,74,0.18); border-radius: 10px; }
+  .hero__pillar  { border: 1px solid rgba(184,92,56,0.18); border-radius: 10px; }
 
   .footer__top { flex-direction: column; }
   .footer__links { gap: 1.2rem; }
@@ -1358,17 +1366,17 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
     <div class="hero__pillars reveal reveal-d2">
       <div class="hero__pillar">
-        <div class="hero__pillar-icon">🧠</div>
+        <div class="hero__pillar-icon">01</div>
         <h3 class="hero__pillar-title">חשיבה שה-AI<br>לא יכול לייצר</h3>
         <p class="hero__pillar-body">מתודולוגיה מבוססת אמנות שמשביתה נרטיבים נוקשים ופותחת רעיונות שאי אפשר להגיע אליהם בדרך הרגילה.</p>
       </div>
       <div class="hero__pillar hero__pillar--mid">
-        <div class="hero__pillar-icon">🤝</div>
+        <div class="hero__pillar-icon">02</div>
         <h3 class="hero__pillar-title">שוליים<br>מחבקים</h3>
         <p class="hero__pillar-body">כשטכנולוגיה פוגשת אמנות ומנכ"ל עובד ליד אמא מקרית שמונה — נוצרת חשיבה שחדר ישיבות לא יוצר.</p>
       </div>
       <div class="hero__pillar">
-        <div class="hero__pillar-icon">🎨</div>
+        <div class="hero__pillar-icon">03</div>
         <h3 class="hero__pillar-title">האמנות<br>כמפתח</h3>
         <p class="hero__pillar-body">לא כלי טיפולי — מפגש עם טבע העולם. האמנות פותחת מה שהשפה סוגרת ומאפשרת גישה לתובנות שהמוח הרציונלי חוסם.</p>
       </div>
@@ -1425,17 +1433,14 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
   <div class="pillars">
     <div class="pillar reveal">
-      <div class="pillar__icon">🧠</div>
       <h3 class="pillar__title">נוירולוגיה</h3>
       <p class="pillar__body">הפעלת ה-Default Mode Network — הרשת הנוירולוגית שמאחורי כל הפריצות הגדולות — דרך שקיעה חושית ומטפורית.</p>
     </div>
     <div class="pillar reveal reveal-d1">
-      <div class="pillar__icon">🎨</div>
       <h3 class="pillar__title">אמנות</h3>
       <p class="pillar__body">שימוש בחומרים, צבעים, תנועה וצורה כשפה קוגניטיבית — לא כביטוי אמנותי, אלא כמנגנון גישה לחשיבה פרה-ורבלית.</p>
     </div>
     <div class="pillar reveal reveal-d2">
-      <div class="pillar__icon">🔍</div>
       <h3 class="pillar__title">פנומנולוגיה</h3>
       <p class="pillar__body">על בסיס אפוכה של הוסרל — השעיית הנחות מוקדמות כדי לראות את הבעיה כפי שהיא, לא כפי שציפינו שתהיה.</p>
     </div>
@@ -1445,24 +1450,24 @@ button { cursor: pointer; font-family: inherit; border: none; }
     <div class="stages-label">חמשת שלבי התהליך</div>
     <div class="stages">
       <div class="stage">
-        <div class="stage__circle" style="background:#4a7fbf;">1</div>
+        <div class="stage__circle" style="background:#5a7d8a;">1</div>
         <div class="stage__name">מיפוי המבנה הקיים</div>
       </div>
       <div class="stage">
-        <div class="stage__circle" style="background:#3d8a6e;">2</div>
+        <div class="stage__circle" style="background:#7a9e8a;">2</div>
         <div class="stage__name">פירוק רדיקלי</div>
       </div>
       <div class="stage">
-        <div class="stage__circle stage__circle--lg" style="background:#c4a24a;">3</div>
+        <div class="stage__circle stage__circle--lg" style="background:#b85c38;">3</div>
         <div class="stage__name">שהייה במרחב הכאוטי-מטפורי</div>
         <div class="stage__sub">הלב של התהליך</div>
       </div>
       <div class="stage">
-        <div class="stage__circle" style="background:#b8960a;">4</div>
+        <div class="stage__circle" style="background:#9a7a42;">4</div>
         <div class="stage__name">אמרג׳נס</div>
       </div>
       <div class="stage">
-        <div class="stage__circle" style="background:#1a1713; border: 2px solid rgba(30,27,22,0.25);">5</div>
+        <div class="stage__circle" style="background:#2e2010; border: 2px solid rgba(34,21,8,0.25);">5</div>
         <div class="stage__name">רה-קונטקסטואליזציה</div>
       </div>
     </div>
@@ -1543,7 +1548,6 @@ button { cursor: pointer; font-family: inherit; border: none; }
 <section class="about" id="about">
   <div class="about__inner">
     <div class="about__photo reveal">
-      <div class="about__photo-placeholder">📷</div>
       <span>תמונה</span>
     </div>
 
@@ -1734,7 +1738,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
         </div>
         <button type="submit" class="form-submit">שלחו</button>
         <div class="form__success" id="formSuccess">
-          תודה! קיבלנו את פנייתכם ונחזור אליכם תוך 24 שעות. 🙏
+          תודה! קיבלנו את פנייתכם ונחזור אליכם תוך 24 שעות.
         </div>
       </form>
     </div>
