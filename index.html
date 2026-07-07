@@ -870,13 +870,13 @@ button { cursor: pointer; font-family: inherit; border: none; }
   line-height: 1.55;
 }
 
-/* diagonal to contact */
+/* diagonal to space */
 .resources::after {
   content: '';
   position: absolute;
   bottom: -3px; left: 0; right: 0;
   height: 80px;
-  background: var(--dark);
+  background: var(--light2);
   clip-path: polygon(0 40%, 100% 100%, 0 100%);
   z-index: 1;
 }
@@ -1051,6 +1051,153 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 /* ═══════════════════════════════════════════
+   TECH PITCH
+═══════════════════════════════════════════ */
+.techpitch {
+  background: var(--dark3);
+  padding: var(--pad-y) var(--pad-x);
+  position: relative;
+  border-top: 1px solid rgba(196,162,74,0.08);
+}
+
+.techpitch__hook {
+  max-width: 700px;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.techpitch__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  max-width: 860px;
+}
+
+.techpitch__col-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(244,240,232,0.4);
+  margin-bottom: 0.8rem;
+}
+
+.techpitch__col-text {
+  font-size: clamp(0.88rem, 1.4vw, 1rem);
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.techpitch::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0; right: 0;
+  height: 80px;
+  background: var(--light2);
+  clip-path: polygon(0 100%, 100% 25%, 100% 100%);
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════
+   SPACE
+═══════════════════════════════════════════ */
+.space {
+  background: var(--light2);
+  color: var(--text);
+  padding: var(--pad-y) var(--pad-x);
+  position: relative;
+}
+
+.space__head {
+  max-width: 680px;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.space__sub {
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  font-weight: 300;
+  color: var(--text-m);
+  line-height: 1.75;
+  margin-top: 1rem;
+}
+
+.space__zones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.space-zone {
+  padding: clamp(1.5rem, 2.5vw, 2.2rem);
+  border: 1px solid rgba(30,27,22,0.1);
+  border-radius: var(--radius);
+  background: rgba(30,27,22,0.02);
+  transition: border-color 0.25s;
+}
+.space-zone:hover { border-color: var(--gold-bdr); }
+
+.space-zone__num {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.35;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.space-zone h3 {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.7rem;
+}
+
+.space-zone p {
+  font-size: clamp(0.82rem, 1.3vw, 0.92rem);
+  font-weight: 300;
+  color: var(--text-m);
+  line-height: 1.7;
+}
+
+.space__model {
+  padding: clamp(2rem, 4vw, 3.5rem);
+  background: rgba(196,162,74,0.06);
+  border: 1px solid rgba(196,162,74,0.25);
+  border-radius: var(--radius);
+}
+
+.space__model-title {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0.5rem 0 1rem;
+  line-height: 1.2;
+}
+
+.space__model-text {
+  font-size: clamp(0.88rem, 1.4vw, 1rem);
+  font-weight: 300;
+  color: var(--text-m);
+  line-height: 1.75;
+  max-width: 620px;
+}
+
+.space::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0; right: 0;
+  height: 80px;
+  background: var(--dark);
+  clip-path: polygon(0 40%, 100% 100%, 0 100%);
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════ */
 @media (max-width: 900px) {
@@ -1060,10 +1207,12 @@ button { cursor: pointer; font-family: inherit; border: none; }
   .challenge__stats { grid-template-columns: 1fr; }
   .pillars          { grid-template-columns: 1fr; }
   .programs__grid   { grid-template-columns: 1fr; }
+  .techpitch__cols  { grid-template-columns: 1fr; }
   .about__inner     { grid-template-columns: 1fr; }
   .about__photo     { max-height: 300px; aspect-ratio: 4/3; }
   .articles__grid   { grid-template-columns: 1fr; }
   .resources__grid  { grid-template-columns: 1fr; }
+  .space__zones     { grid-template-columns: 1fr; }
   .contact__inner   { grid-template-columns: 1fr; }
 
   .stages { flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
@@ -1093,6 +1242,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
     <li><a href="#methodology">מתודולוגיה</a></li>
     <li><a href="#programs">תוכניות</a></li>
     <li><a href="#about">אודות</a></li>
+    <li><a href="#space">המרחב הפיזי</a></li>
     <li><a href="#articles">מאמרים</a></li>
     <li><a href="#resources">משאבים</a></li>
   </ul>
@@ -1109,6 +1259,7 @@ button { cursor: pointer; font-family: inherit; border: none; }
   <a href="#methodology" class="overlay-link">מתודולוגיה</a>
   <a href="#programs"    class="overlay-link">תוכניות</a>
   <a href="#about"       class="overlay-link">אודות</a>
+  <a href="#space"       class="overlay-link">המרחב הפיזי</a>
   <a href="#articles"    class="overlay-link">מאמרים</a>
   <a href="#resources"   class="overlay-link">משאבים</a>
   <a href="#contact"     class="overlay-link">צרו קשר</a>
@@ -1261,6 +1412,33 @@ button { cursor: pointer; font-family: inherit; border: none; }
   </div>
 </section>
 
+<!-- ══════════════════════ TECH PITCH ══════════════════════ -->
+<section class="techpitch" id="techpitch">
+  <div class="techpitch__hook reveal">
+    <span class="label">לחברות טכנולוגיה ו-R&D</span>
+    <h2 class="section-title">ה-AI כותב לצוות שלך את הקוד.<br>זה בדיוק מה שצריך להדאיג אותך.</h2>
+  </div>
+
+  <div class="techpitch__cols">
+    <div class="reveal">
+      <div class="techpitch__col-label">הבעיה</div>
+      <p class="techpitch__col-text">
+        הנגישות לקוד מהיר מייצרת אשליה של פרודוקטיביות, אבל בפועל מציפה את הארגון ב"חוב טכנולוגי סינתטי" — קוד מורכב שנפלט מאלגוריתמים, בלי שאף אדם מבין את הארכיטקטורה שלו בעומק. המהנדסים הפכו למפעילי מכונות ב-100% מצב ביצוע ואיבדו את היכולת לחשוב לעומק.
+      </p>
+    </div>
+    <div class="reveal reveal-d1">
+      <div class="techpitch__col-label">הפתרון</div>
+      <p class="techpitch__col-text">
+        המהנדסים שלך צריכים להשתדרג מ"כותבי קוד" לארכיטקטים של כוונה — אנשים שיודעים לעצור, לנתק רעשים, להתכוונן קוגניטיבית אל המהות, ורק אז להנחות את המכונה. זה השריר הקוגניטיבי היחיד שאי אפשר להחליף ב-AI.
+      </p>
+    </div>
+  </div>
+
+  <div class="reveal reveal-d2">
+    <a href="#contact" class="btn btn--gold">POC של 4 שבועות — שווה שיחה?</a>
+  </div>
+</section>
+
 <!-- ══════════════════════ ABOUT ══════════════════════ -->
 <section class="about" id="about">
   <div class="about__inner">
@@ -1275,8 +1453,8 @@ button { cursor: pointer; font-family: inherit; border: none; }
       <div class="rule rule--dark"></div>
       <div class="about__body">
         <p>המרחב האנושי נוסד מתוך הבנה אחת: בעידן שבו ה-AI מייצר תשובות מהר ממך — השאלה היחידה שנשארת היא האם אתה שואל את השאלה הנכונה.</p>
-        <p>הצוות שלנו משלב בין ידע בפנומנולוגיה, נוירולוגיה, ואמנות — כדי לייצר את התנאים שבהם הופעות קוגניטיביות אמיתיות מתאפשרות.</p>
-        <p>אנחנו לא מלמדים אנשים לחשוב טוב יותר בתוך המסגרת הקיימת. אנחנו עוזרים להם לצאת ממנה.</p>
+        <p><strong>ד"ר רוניתה היימן</strong> פיתחה את המתודולוגיה הפנומנולוגית והנוירו-ביולוגית שעומדת בלב התהליך — שנים של מחקר ועבודה קלינית שגובשו לכלי מעשי לחדשנות ארגונית.</p>
+        <p><strong>אורי טירולר</strong>, יזם ומנכ"ל המיזם, מוביל את יישום המתודולוגיה בעולם העסקי ואת בניית המרחב הפיזי בקרית שמונה.</p>
       </div>
       <a href="#contact" class="about__link">בואו נדבר ←</a>
     </div>
@@ -1384,6 +1562,41 @@ button { cursor: pointer; font-family: inherit; border: none; }
         <div class="resource-card__desc">מחקרים ישראליים על יצירתיות, קוגניציה וחשיבה לא-לינארית</div>
       </div>
     </a>
+  </div>
+</section>
+
+<!-- ══════════════════════ SPACE ══════════════════════ -->
+<section class="space" id="space">
+  <div class="space__head reveal">
+    <span class="label label--dark">המרחב הפיזי</span>
+    <h2 class="section-title section-title--light">קרית שמונה: השוליים המחבקים</h2>
+    <p class="space__sub">מרכז פיזי בגליל העליון שמפגיש תחת קורת גג אחת שלושה עולמות — ויוצר מהם מנוע אזורי של חדשנות, ריפוי וצמיחה. הגליל הופך מאזור נתמך לבירת התודעה והיצירתיות של ישראל.</p>
+  </div>
+
+  <div class="space__zones">
+    <div class="space-zone reveal">
+      <div class="space-zone__num">01</div>
+      <h3>גרעין הריפוי והקהילה</h3>
+      <p>סטודיאות פתוחים לתושבי הצפון — מרחבי יצירה מסובסדים, קבוצות קהילה לחידוש כוח הבריאה, ומפגשי אמנים עם הקהילה המקומית.</p>
+    </div>
+    <div class="space-zone reveal reveal-d1">
+      <div class="space-zone__num">02</div>
+      <h3>מעבדת ה-R&D והחדשנות</h3>
+      <p>מתחם לחברות טכנולוגיה וצוותי פיתוח מהמרכז. עוברים את אותה מתודולוגיה — ובמרחק מהמשרד, בתוך נוף הגליל.</p>
+    </div>
+    <div class="space-zone reveal reveal-d2">
+      <div class="space-zone__num">03</div>
+      <h3>השוליים המחבקים</h3>
+      <p>בית הקפה, הסטודיאות הפתוחים והמרחבים המשותפים — שם נפגשים "עוצמה" ו"ריפוי" בלי היררכיה, ויוצרים זרז לשינוי.</p>
+    </div>
+  </div>
+
+  <div class="space__model reveal">
+    <span class="label label--dark">המודל הכלכלי</span>
+    <h3 class="space__model-title">חברות טכנולוגיה משלמות.<br>הקהילה מקבלת.</h3>
+    <p class="space__model-text">
+      סבסוד צולב: ההכנסות מהפעילות המסחרית (B2B) נשארות בצפון ומממנות באופן קבוע את הפעילות הקהילתית. חברות לא מגיעות כ"תורמות" — אלא כצרכניות ערך עסקי וקוגניטיבי. לא פילנתרופיה — קניית שירות.
+    </p>
   </div>
 </section>
 
