@@ -235,7 +235,8 @@ button { cursor: pointer; font-family: inherit; border: none; }
 .hero__inner {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  max-width: 960px;
+  width: 100%;
 }
 
 .hero__super {
@@ -250,11 +251,11 @@ button { cursor: pointer; font-family: inherit; border: none; }
 
 .hero__title {
   font-family: 'Frank Ruhl Libre', serif;
-  font-size: clamp(3rem, 8vw, 7.5rem);
-  line-height: 1.03;
+  font-size: clamp(2.6rem, 5.5vw, 5rem);
+  line-height: 1.05;
   font-weight: 700;
   color: var(--warm);
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.4rem;
 }
 
 .hero__body {
@@ -1051,6 +1052,81 @@ button { cursor: pointer; font-family: inherit; border: none; }
 }
 
 /* ═══════════════════════════════════════════
+   HERO — THREE PILLARS
+═══════════════════════════════════════════ */
+.hero__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: rgba(244,240,232,0.5);
+  margin-bottom: 1.8rem;
+  border: 1px solid rgba(196,162,74,0.2);
+  padding: 0.38rem 1rem;
+  border-radius: 50px;
+}
+
+.hero__location-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  animation: location-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes location-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.hero__pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin: 0 auto 2.5rem;
+  border: 1px solid rgba(196,162,74,0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  gap: 1px;
+  background: rgba(196,162,74,0.15);
+}
+
+.hero__pillar {
+  background: rgba(14,12,9,0.97);
+  padding: clamp(1.4rem, 2.5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  text-align: start;
+  transition: background 0.25s;
+}
+.hero__pillar:hover { background: rgba(26,23,19,0.98); }
+
+.hero__pillar--mid {
+  background: rgba(196,162,74,0.05);
+}
+
+.hero__pillar-icon { font-size: 1.8rem; line-height: 1; }
+
+.hero__pillar-title {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: clamp(1rem, 1.7vw, 1.22rem);
+  font-weight: 700;
+  color: var(--warm);
+  line-height: 1.25;
+}
+
+.hero__pillar-body {
+  font-size: clamp(0.76rem, 1.15vw, 0.85rem);
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ═══════════════════════════════════════════
    TECH PITCH
 ═══════════════════════════════════════════ */
 .techpitch {
@@ -1219,7 +1295,9 @@ button { cursor: pointer; font-family: inherit; border: none; }
   .stages::before { display: none; }
   .stage { flex: 0 0 40%; }
 
-  .hero__title { font-size: clamp(2.5rem, 10vw, 5rem); }
+  .hero__title   { font-size: clamp(2.2rem, 8vw, 4rem); }
+  .hero__pillars { grid-template-columns: 1fr; background: transparent; border: none; gap: 0.7rem; }
+  .hero__pillar  { border: 1px solid rgba(196,162,74,0.18); border-radius: 10px; }
 
   .footer__top { flex-direction: column; }
   .footer__links { gap: 1.2rem; }
@@ -1268,17 +1346,39 @@ button { cursor: pointer; font-family: inherit; border: none; }
 <!-- ══════════════════════ HERO ══════════════════════ -->
 <section class="hero" id="home">
   <div class="hero__inner">
-    <span class="hero__super reveal">המרחב האנושי</span>
+
+    <div class="hero__location reveal">
+      <span class="hero__location-dot"></span>
+      מרכז פיזי · קרית שמונה, גליל עליון
+    </div>
+
     <h1 class="hero__title reveal reveal-d1">
-      החשיבה שה-AI<br>לא יכול לייצר
+      פריצות דרך<br>נוצרות כאן
     </h1>
-    <p class="hero__body reveal reveal-d2">
-      מרחב מובנה לפריצות קוגניטיביות — עבור חברות טכנולוגיה, יזמים ורוכשי החלטה שמבינים שהיתרון התחרותי הבא לא יגיע מהכלי הנכון — אלא מהתהליך הנכון.
-    </p>
+
+    <div class="hero__pillars reveal reveal-d2">
+      <div class="hero__pillar">
+        <div class="hero__pillar-icon">🧠</div>
+        <h3 class="hero__pillar-title">חשיבה שה-AI<br>לא יכול לייצר</h3>
+        <p class="hero__pillar-body">מתודולוגיה מבוססת אמנות שמשביתה נרטיבים נוקשים ופותחת רעיונות שאי אפשר להגיע אליהם בדרך הרגילה.</p>
+      </div>
+      <div class="hero__pillar hero__pillar--mid">
+        <div class="hero__pillar-icon">🤝</div>
+        <h3 class="hero__pillar-title">שוליים<br>מחבקים</h3>
+        <p class="hero__pillar-body">כשטכנולוגיה פוגשת אמנות ומנכ"ל עובד ליד אמא מקרית שמונה — נוצרת חשיבה שחדר ישיבות לא יוצר.</p>
+      </div>
+      <div class="hero__pillar">
+        <div class="hero__pillar-icon">🎨</div>
+        <h3 class="hero__pillar-title">האמנות<br>כמפתח</h3>
+        <p class="hero__pillar-body">לא כלי טיפולי — מפגש עם טבע העולם. האמנות פותחת מה שהשפה סוגרת ומאפשרת גישה לתובנות שהמוח הרציונלי חוסם.</p>
+      </div>
+    </div>
+
     <div class="hero__ctas reveal reveal-d3">
       <a href="#contact" class="btn btn--gold">בואו נדבר</a>
-      <a href="#methodology" class="btn btn--ghost">גלו את המתודה</a>
+      <a href="#space" class="btn btn--ghost">גלו את המרחב הפיזי</a>
     </div>
+
   </div>
   <div class="hero__scroll">
     <span>גללו</span>
